@@ -37,6 +37,9 @@ dependencies:
   sizer: ^2.0.15
   iconly: ^1.0.1
   animate_do: ^3.3.4
+  vibration: ^1.8.4
+  animated_text_lerp: ^1.0.5
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:

@@ -12,8 +12,10 @@ class AnimatedLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(
-      builder: (context, orientation, deviceType) =>
-          MaterialApp(home: WelcomePage()),
+      builder: (context, orientation, deviceType) => MaterialApp(
+        home: WelcomePage(),
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }

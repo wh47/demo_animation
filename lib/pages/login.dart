@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/homescreen.dart';
+import 'package:flutter_application_1/pages/sidemenu.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sizer/sizer.dart';
 
@@ -208,7 +208,8 @@ class _LoginPageState extends State<LoginPage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => HomeScreen()));
+                                      builder: (context) =>
+                                          ExampleStaggeredAnimations()));
                             },
                             child: FadeInUp(
                                 delay: const Duration(milliseconds: 700),

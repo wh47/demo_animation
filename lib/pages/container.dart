@@ -17,11 +17,11 @@ class _SplashContainerState extends State<SplashContainer>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 2000),
+      duration: Duration(milliseconds: 6000),
     );
     _animation = Tween<double>(
       begin: 1,
-      end: 5,
+      end: 60,
     ).animate(_controller);
 
     _colorAnimation = ColorTween(
@@ -47,8 +47,7 @@ class _SplashContainerState extends State<SplashContainer>
     setState(() {
       _isLongPressing = false;
     });
-    // Do not reverse the animation when long press ends
-    // _controller.reverse();
+    _controller.reverse();
   }
 
   @override

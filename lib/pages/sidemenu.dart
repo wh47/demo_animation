@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/container.dart';
 import 'package:flutter_application_1/pages/textanimation.dart';
+import 'package:flutter_application_1/pages/vibration.dart';
 
 class ExampleStaggeredAnimations extends StatefulWidget {
   const ExampleStaggeredAnimations({
@@ -101,7 +102,7 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
 
   Widget _buildContent() {
     return Center(
-      child: Row(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
@@ -118,22 +119,41 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
               ),
             ),
           ),
-          SizedBox(width: 20),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => AnimatedText()));
-            },
-            child: Container(
-              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-              color: Colors.green,
-              child: Text(
-                'Text Animation',
-                style: TextStyle(color: Colors.white),
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AnimatedText()));
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                  color: Colors.green,
+                  child: Text(
+                    'Text Animation',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
-            ),
+              SizedBox(width: 20),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => VibrationPage()));
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                  color: Colors.blue,
+                  child: Text(
+                    'Vibration',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
           ),
-          SizedBox(width: 20),
         ],
       ),
     );

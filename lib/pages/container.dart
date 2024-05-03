@@ -32,27 +32,29 @@ class _LongPressContainerState extends State<LongPressContainer>
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onLongPressStart: (details) {
-        setState(() {
-          _isPressed = true;
-        });
-        _ticker.start();
-      },
-      onLongPressEnd: (details) {
-        setState(() {
-          _isPressed = false;
-        });
-      },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 20),
-        width: _containerSize,
-        height: _containerSize,
-        color: _isPressed ? Colors.blue : Colors.green,
-        child: const Center(
-          child: Text(
-            'Long Press Me',
-            style: TextStyle(color: Colors.white),
+    return Center(
+      child: GestureDetector(
+        onLongPressStart: (details) {
+          setState(() {
+            _isPressed = true;
+          });
+          _ticker.start();
+        },
+        onLongPressEnd: (details) {
+          setState(() {
+            _isPressed = false;
+          });
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 20),
+          width: _containerSize,
+          height: _containerSize,
+          color: _isPressed ? Colors.blue : Colors.green,
+          child: const Center(
+            child: Text(
+              'Long Press',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
       ),

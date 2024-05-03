@@ -17,9 +17,7 @@ class AnimatedText extends StatelessWidget {
             const SizedBox(width: 20.0, height: 100.0),
             DefaultTextStyle(
               style: const TextStyle(
-                fontSize: 40.0,
-                fontFamily: 'Satoshi',
-              ),
+                  fontSize: 40.0, fontFamily: 'Satoshi', color: Colors.black),
               child: AnimatedTextKit(
                 animatedTexts: [
                   RotateAnimatedText('AWESOME'),

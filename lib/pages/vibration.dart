@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:vibration/vibration.dart';
 
 class VibrationPage extends StatelessWidget {
@@ -20,7 +19,6 @@ class VibrationPage extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               color: Colors.blue,
-              decoration: TextDecoration.underline,
             ),
           ),
         ),

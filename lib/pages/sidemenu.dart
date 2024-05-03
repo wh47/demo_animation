@@ -107,8 +107,10 @@ class _ExampleStaggeredAnimationsState extends State<ExampleStaggeredAnimations>
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SplashContainer()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LongPressContainer()));
             },
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
